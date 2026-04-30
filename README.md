@@ -123,21 +123,15 @@ XSS
 <img src=x onerror=alert(1)>
 Limitations
 
-Let’s be honest — this is not a real WAF.
-
 Regex-based detection can be bypassed easily
 No protection against advanced payload obfuscation
 No rate limiting or IP blocking
 No integration with real-world traffic
 
-This is a learning model, not a security solution.
+This is a learning model
 
 Future Improvements
-
-If you actually want to level this up:
-
 Add anomaly-based detection (ML-based)
 Store logs in a database
 Implement IP blocking / rate limiting
 Build an analytics dashboard
-Integrate with tools like Burp Suite or OWASP ZAP
