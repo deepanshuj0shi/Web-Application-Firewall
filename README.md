@@ -82,56 +82,83 @@ Payload data
 This simulates how real security systems maintain logs for investigation and auditing.
 
 System Workflow
-User submits input from the dashboard
-Request is intercepted before reaching route
-Payload is extracted and analyzed
-Regex engine checks for attack signatures
-Result is returned to UI (Safe / Attack)
-Request details are logged
-Technology Stack
-Backend
-Python (Flask framework)
-Frontend
-HTML + Bootstrap (for clean UI)
-Security Logic
-Python Regex (re module)
-Project Structure
+
+-User submits input from the dashboard
+
+-Request is intercepted before reaching route
+
+-Payload is extracted and analyzed
+
+-Regex engine checks for attack signatures
+
+-Result is returned to UI (Safe / Attack)
+
+-Request details are logged
+
+-Technology Stack
+
+-Backend
+
+-Python (Flask framework)
+
+-Frontend
+
+-HTML + Bootstrap (for clean UI)
+
+-Security Logic
+
+-Python Regex (re module)
+
+#Project Structure
+
 waf-project/
 │── app.py                 # Main Flask app with WAF logic
 │── templates/
 │     └── index.html       # Dashboard UI
 │── README.md
-How to Run
-Clone the repository
-git clone https://github.com/your-username/waf-project.git
-cd waf-project
+
+#How to Run
+
 Install dependencies
-pip install flask
-Run the application
-python app.py
-Open in browser
-http://127.0.0.1:5000
-Testing the System
+
+-pip install flask
+
+-Run the application
+
+-python app.py
+
+-Open in browser
+
+-http://127.0.0.1:5000
+
+-Testing the System
 
 You can test the detection engine using sample payloads.
 
-SQL Injection
+
+#SQL Injection
 ' OR '1'='1
 UNION SELECT username, password FROM users
-XSS
+
+#XSS
 <script>alert('XSS')</script>
 <img src=x onerror=alert(1)>
-Limitations
 
-Regex-based detection can be bypassed easily
-No protection against advanced payload obfuscation
-No rate limiting or IP blocking
-No integration with real-world traffic
+#Limitations
+
+-Regex-based detection can be bypassed easily
+-No protection against advanced payload obfuscation
+-No rate limiting or IP blocking
+-No integration with real-world traffic
 
 This is a learning model
 
-Future Improvements
-Add anomaly-based detection (ML-based)
-Store logs in a database
-Implement IP blocking / rate limiting
-Build an analytics dashboard
+#Future Improvements
+
+-Add anomaly-based detection (ML-based)
+
+-Store logs in a database
+
+-Implement IP blocking / rate limiting
+
+-Build an analytics dashboard
